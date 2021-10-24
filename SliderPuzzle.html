@@ -1,0 +1,61 @@
+<!-- Kevin Wang, Section 83 Even 5/6, 10/23/2021 -->
+
+<!-- This project was decent. Something that went well was the CSS because creating the table 
+    and making the layout look presentable was pretty easy. However, something that didn't go 
+    as intended was trying to code the functions that would make the puzzle move in the correct
+    order and place. It was mostly practicing already known skills because I have used the 
+    tables, buttons, and innerHTML for my project. One thing that sticked to me the most is the 
+    document.getElementById ("").innerHTML because I have been using it repeatedly throughout my
+    whole entire project. -->
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <script src = "script.js" async> </script>
+    <title> Slider Puzzle </title>
+</head>
+<body onload = "initialize ();">
+    <table>
+        <h1> Slider Puzzle </h1>
+    <hr/> <br/>
+        <button onclick = "reset ();" > Reset </button>
+        <button onclick = "start ();" > Start </button>
+    <br/> <br/>
+        <div> Moves: <span id = "move" > </span> </div>
+    <br/>
+        
+        <tr> 
+            <th colspan = "4"> <span id = "comments"> </span></th>
+        </tr>
+        <tr>
+            <td id = "01" onclick = "change (0, 1);" > </td>
+            <td id = "02" onclick = "change (0, 2);" > </td>
+            <td id = "03" onclick = "change (0, 3);" > </td>
+            <td id = "04" onclick = "change (0, 4);" > </td>
+        </tr>
+        <tr>
+            <td id = "11" onclick = "change (1, 1);" > </td>
+            <td id = "12" onclick = "change (1, 2);" > </td>
+            <td id = "13" onclick = "change (1, 3);" > </td>
+            <td id = "14" onclick = "change (1, 4);" > </td>
+        </tr>
+        <tr>
+            <td id = "21" onclick = "change (2, 1);" > </td>
+            <td id = "22" onclick = "change (2, 2);" > </td>
+            <td id = "23" onclick = "change (2, 3);" > </td>
+            <td id = "24" onclick = "change (2, 4);" > </td>
+        </tr>
+        <tr>
+            <td id = "31" onclick = "change (3, 1);" > </td>
+            <td id = "32" onclick = "change (3, 2);" > </td>
+            <td id = "33" onclick = "change (3, 3);" > </td>
+            <td id = "34" onclick = "change (3, 4);" > </td>
+        </tr>
+    </table>
+</body>
+</html>
