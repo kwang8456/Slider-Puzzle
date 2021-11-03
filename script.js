@@ -1,3 +1,6 @@
+/*
+ * start the board and display the numbers 
+ */
 function initialize ()
 {
     resetBoard ();
@@ -6,6 +9,9 @@ function initialize ()
     display ();
 }
 
+/*
+ * swap the value/position of two different element
+ */
 function swap (i, j)
 {
     document.getElementById (j).innerHTML = document.getElementById (i).innerHTML;
@@ -16,6 +22,10 @@ function swap (i, j)
     checkIfComplete ();
 }
 
+/*
+ * check if the element at position (r,c) can be swap to another
+ * position
+ */
 function change (r, c)
 {
     //Check top
@@ -44,6 +54,9 @@ function change (r, c)
     }
 }
 
+/*
+ * check if the board is complete and all the pieces are in order
+ */
 function checkIfComplete ()
 {
     if (isShuffled)
@@ -88,6 +101,9 @@ function checkIfComplete ()
     }
 }
 
+/*
+ * shuffle the board
+ */
 function shuffle ()
 {
     var i = 0;
@@ -100,12 +116,18 @@ function shuffle ()
     display (); 
 }
 
+/*
+ * start the game and shuffle the board
+ */
 function start ()
 {
     shuffle ();
     document.getElementById ("comments").innerHTML = "The Puzzle has been shuffled 1000 times. <br/> Good Luck and Have Fun! <br/> Click the Reset button to Reset the board";
 }
 
+/*
+ * resets the board to its original position
+ */
 function resetBoard ()
 {
     var num = 1;
@@ -123,6 +145,9 @@ function resetBoard ()
     canReset = false;
 }
 
+/*
+ * checks if the board can be reset
+ */
 function reset ()
 {
     if (canReset)
@@ -132,6 +157,9 @@ function reset ()
     }
 }
 
+/*
+ * display the number of moves of the player
+ */
 function display ()
 {
     document.getElementById ("move").innerHTML = numMoves;
